@@ -1,50 +1,52 @@
-# # 📚 Stack using Linked List: Check and Display Whether the Stack is Full or Not
+# 📚 Stack using Linked List: Check and Print the Index Value of the Elements Stored in the Stack
 
-This Python program demonstrates how to check if a stack (using `LifoQueue` from the `queue` module) is full or not. It uses the `full()` method to determine the stack's status and then displays the appropriate message.
+This Python program demonstrates how to:
+1. Create a stack using a list.
+2. Add elements to the stack.
+3. Print the index and corresponding value of each element in the stack.
 
 ## 🎯 Aim
 
 To write a Python program that:
-- Creates a stack with a fixed size.
+- Creates a stack using a list.
 - Adds elements to the stack.
-- Checks if the stack is full.
-- Displays a message indicating whether the stack is full or not.
+- Prints the index values of the stack elements along with the corresponding values.
 
 ## 🧠 Algorithm
 
-1. **Import the LifoQueue class**:
-   - Import `LifoQueue` from the `queue` module to create the stack.
+1. **Create an Empty Stack**:
+   - Initialize an empty list `stack` to store elements.
 
-2. **Create a Stack**:
-   - Instantiate a `LifoQueue` with a maximum size (e.g., 4).
+2. **Add Elements to the Stack**:
+   - Append elements (e.g., 'a', 'b', 'c') to the stack using the `append()` method.
 
-3. **Add Elements to the Stack**:
-   - Add elements (e.g., 'a', 'b', and 'c') to the stack using the `put()` method.
+3. **Print the Initial Stack**:
+   - Print the contents of the stack with a message "Initial stack: ".
 
-4. **Check if the Stack is Full**:
-   - Use the `full()` method of `LifoQueue` to check if the stack has reached its maximum capacity.
+4. **Iterate through the Stack**:
+   - Use a `for` loop with `range()` to iterate through the stack.
+   - Print the index value and corresponding element at that index.
 
-5. **Display the Status**:
-   - Print "Stack is full" if the stack is full.
-   - Otherwise, print "Stack is not full".
+5. **Print Index and Value**:
+   - For each element in the stack, print the index and the value at that index.
 
 ## 📝 Program
 ```
-from queue import LifoQueue
+stack = []
 
-stack = LifoQueue(maxsize=4)
+stack.append('a')
+stack.append('b')
+stack.append('c')
 
-stack.put('a')
-stack.put('b')
-stack.put('c')
+print('Initial stack: ' + str(stack))
 
-if stack.full():
-    print("Stack is full")
-else:
-    print("Stack is not full")
+for i in range(len(stack)):
+    print(i, end=" ")
+    print(stack[i])
 ```
+
 ## Sample Input & Output
-<img width="534" height="161" alt="489275195-40532eb9-66e9-4eda-b055-226a1e4b562d" src="https://github.com/user-attachments/assets/3d70df37-08a2-4733-bc14-95e0685ba67f" />
+<img width="686" height="166" alt="489275427-d5f9d6e8-11e1-4b9d-aa45-35d3f0e20603" src="https://github.com/user-attachments/assets/d0bf636b-4b8a-494d-9d04-3a7c1bbd80ab" />
 
 ## Result
 Thus the output is verified.
